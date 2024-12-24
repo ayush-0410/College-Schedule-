@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Timetable Management</h1>
+      <label class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-checkbox" onchange="toggleDarkMode()">
+        Dark Mode
+      </label>
+    </header>
+    <label for="phase-select">Select Phase:</label>
+    <select id="phase-select" onchange="displayTimetable()">
+      <option value="">--Select Phase--</option>
+      <option value="phase1">Phase-I</option>
+      <option value="phase2">Phase-II</option>
+      <option value="phase3p1">Phase-III Part-1</option>
+      <option value="phase3p2">Phase-III Part-2</option>
+    </select>
+    <div>
+      <button class="dropdown-button" onclick="toggleDropdown()">Mark Absent Teachers</button>
+      <ul id="teacher-list" class="dropdown-content"></ul>
+    </div>
+    <div id="timetable-container">
+      <!-- Timetables will be dynamically displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
